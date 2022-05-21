@@ -1,14 +1,6 @@
-import Vue from "vue";
-import Vuex from "vuex";
-import juegos from "./games.json";
-console.log(juegos);
-
-Vue.use(Vuex);
-
-export default new Vuex.Store({
+export default {
   state: {
     opiniones: [],
-    juegos,
   },
   getters: {
     enviandoJuegos(state) {
@@ -51,4 +43,4 @@ export default new Vuex.Store({
       commit("EDITANDO_OPINION", editado);
     },
   },
-});
+};
